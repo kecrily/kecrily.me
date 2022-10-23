@@ -1,0 +1,56 @@
+<script lang="ts" setup>
+import { Markdown, formatTime } from '../composables'
+
+const { path } = useRoute()
+const { frontmatter: md } = defineProps<{frontmatter: Markdown}>()
+const { meta: { time } } = getRoutes().filter(i => i.path === path)[0]
+
+useHead({
+  title: md.title,
+  meta: [
+    { name: 'description', content: md.description },
+    { name: 'keywords', content: md.tags.join(', ') },
+    { property: 'og:type', content: 'article' },
+    { property: 'og:title', content: md.title },
+    { property: 'og:description', content: md.description },
+    { property: 'article:author', content: md.title },
+    { property: 'article:published_time', content: md.date },
+    { property: 'article:tag', content: md.tags.join(', ') },
+    { name: 'twitter:card', content: 'summary' },
+    { name: 'twitter:title', content: md.title },
+    { name: 'twitter:description', content: md.description },
+  ],
+  link: [
+    { rel: 'canonical', href: site.canonical + path },
+  ],
+})
+
+const cover = new URL(`../../content/assets/${md.cover}`, import.meta.url).href
+
+if (md.cover) {
+  useHead({ meta: [
+    { property: 'og:image', content: cover },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:image', content: cover },
+  ] })
+}
+
+if (md.lang) {
+  useHead({
+    htmlAttrs: { lang: 'zh-cmn-Hans-CN' },
+  })
+}
+</script>
+
+<template>
+  <article prose>
+    <h1>{{ md.title }}</h1>
+    <div flex mb-4>
+      <time :datetime="md.date">{{ formatTime(md.date) }}</time>
+      <Dot />
+      <div>{{ Math.round(time as number) }} mins</div>
+    </div>
+    <slot />
+    <Comment />
+  </article>
+</template>
