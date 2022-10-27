@@ -5,7 +5,7 @@ description: 买了台 MacBook Air，其实我早在 8 月底就拿到了，但�
 tags:
   - macOS
   - MacBook
-cover: macbook-air-desktop.png
+cover: macbook-air-desktop.webp
 ---
 
 <script setup>
@@ -17,7 +17,7 @@ import Hello from '../assets/hello.json'
 
 买了台 MacBook Air，其实我早在 8 月底就拿到了，但因为博客在半年前 💀 后还未复活就文章也就随着一拖再拖。
 
-![使用默认壁纸的 MacBook Air 桌面](../assets/macbook-air-desktop.png)
+![使用默认壁纸的 MacBook Air 桌面](../assets/macbook-air-desktop.webp)
 
 Apple 一直有对中国大陆和香港、澳门等地区所发售的设备进行限制。在初始化 macOS 时就需要选择了非中国大陆地区以避免地区锁限制[^1]，当然也可以选择在初始化完成后再自行修改地区。
 
@@ -51,7 +51,7 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 被人诟病的刘海对我来说还好，唯一的缺憾就是当应用菜单与状态菜单内容过多时，就会嫌弃刘海占了一部分空间。当然这也和我使用的并非默认分辨率有很大关系，所幸遇到应用菜单最多的也就 Chrome 而已。
 
-![当打开 Chrome 时的菜单栏，数量巨大的应用菜单和刘海让菜单栏空间所剩无几](./../assets/chrome-menu-bar-on-macos.png)
+![当打开 Chrome 时的菜单栏，数量巨大的应用菜单和刘海让菜单栏空间所剩无几](./../assets/chrome-menu-bar-on-macos.webp)
 
 ---
 
