@@ -19,7 +19,7 @@ import Hello from '../assets/hello.json'
 
 ![使用默认壁纸的 MacBook Air 桌面](../assets/macbook-air-desktop.webp)
 
-Apple 一直有对中国大陆和香港、澳门等地区所发售的设备进行限制。在初始化 macOS 时就需要选择了非中国大陆地区以避免地区锁限制[^1]，当然也可以选择在初始化完成后再自行修改地区。
+Apple 一直有对中国大陆和香港、澳门等地区所发售的设备进行限制。在初始化 macOS 时就需要避免选择这些地区以躲开地区锁限制[^1]，当然也可以选择在初始化完成后再自行修改地区。
 
 ```sh
 sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
@@ -27,19 +27,22 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 ---
 
-之前在使用和 MacBook Air（13.6″）差不多大小的 Lenovo Xiaoxin Pro（13.3″），可能因为不习惯的原因 macOS 默认分辨率（1470 x 956）眼睛看着有点吃力，不过工具是为人服务的，没必要把默认设置当成圣经来遵从。我就把它改成了更大一号，与 Windows 下默认分辨率近似的 1280 x 832。
+之前在使用和 MacBook Air（13.6″）差不多大小的 Lenovo Xiaoxin Pro（13.3″），可能因为不习惯的原因 macOS 默认分辨率（1470 x 956）眼睛看着有点吃力，不过工具是为人服务的，没必要把默认设置当成圣经来遵从。我就把它改成了更大一号，与 Windows 下默认 2K 分辨率近似的 1280 x 832。
 
 ---
 
-之前听到的 MacBook Air 在冬天甚至有些冻手的传闻有点夸张，不过而在高性能场景下稍微有点温手，不过再也不会烤我的大腿肉了。它的无风扇设计 + Apple Silicon arm 架构的低功耗让续航基本达到了一天一充，a charge a day, keep 数码吊瓶 away。
+之前听到的 MacBook Air 在冬天甚至有些冻手的传闻有点夸张，在高性能场景下稍微有点温手，不过再也不至于会烤大腿肉了。它的无风扇设计 + Apple Silicon arm 架构的低功耗让续航基本达到了一天一充，a charge a day, keep 数码吊瓶 away。
 
 ---
 
-新换的模具以及 MagSafe 3 我都很喜欢，之前所使用的联想小新 Pro 13‘‘ 就曾因为 type-c 充电口太牢的而摔在地上磕出了几个凹处，这回终于摆脱这个痛苦了。磁吸的设计让我在晚上关灯的情况下也能够比较容易地充上电，而不是打着个手电或起身开灯顺带亮瞎我的眼。
+新换的模具以及 MagSafe 3 我都很喜欢，之前所使用的联想小新 Pro 13‘‘ 就曾因为 Type-C 充电口插得太牢而摔在地上磕出了几个坑，这回终于摆脱这个痛苦了。磁吸设计让我在晚上已经关灯的情况下也能够比较容易地充上电，而不是打着个手电或起身开灯顺带亮瞎我的眼。
 
 ---
 
-之前就有看到几位朋友的博客里有写对 macOS 反人类的 Caps Lock 切换语言进行魔改的文章，也正因此在选购时我选择了美式键盘而非简体中文键盘，将 Caps Lock 键上的文字改成「中/英」纯粹是 Apple 自作聪明的本地化，极其失败。
+之前就有看到几位朋友的博客里有写对 macOS 反人类的 Caps Lock 切换语言进行魔改的文章，也正因此在选购时我选择了美式键盘而非中文（拼音）键盘，将 Caps Lock 键上的文字改成「中/英」纯粹是 Apple 自作聪明的本地化，极其失败。
+
+![美式英文妙控键盘](../assets//magic-keyboard-us.webp)
+![中文（拼音）妙控键盘](../assets//magic-keyboard-ch.webp)
 
 在使用时我并没有尝试像其他一样尝试着接受或是使用 Karabiner 之类的软件进行改键。我注意到在 fn 键上有一个 🌐 的图标，我想这才应该是切换语言功能的归属。
 
@@ -49,7 +52,7 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 ---
 
-被人诟病的刘海对我来说还好，唯一的缺憾就是当应用菜单与状态菜单内容过多时，就会嫌弃刘海占了一部分空间。当然这也和我使用的并非默认分辨率有很大关系，所幸遇到应用菜单最多的也就 Chrome 而已。
+遭人诟病的刘海对我来说还好，唯一的缺憾就是当应用菜单与状态菜单内容过多时，就会嫌弃刘海占了一部分空间。当然这也和我使用的并非默认分辨率有很大关系，所幸遇到应用菜单最多的也就 Chrome 而已。
 
 ![当打开 Chrome 时的菜单栏，数量巨大的应用菜单和刘海让菜单栏空间所剩无几](./../assets/chrome-menu-bar-on-macos.webp)
 
@@ -65,7 +68,7 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 > 工欲善其事，必先利其器
 
-Apple 生态下的应用图标受到 Apple 设计规范的约束，不过 macOS 在生态中算是最为开放的了，可以<ruby>侧载<rp>(</rp><rt>sideload</rt><rp>)</rp></ruby>的它让图标也不尽人意，奇行种层出不穷。我使用了 Pictogram 以及大家在 [macOSicons](https://macosicons.com) 上分享的图标对其进行了改造，姑且算是工整了。
+Apple 生态下的应用图标受到 Apple 设计规范的约束，在生态中最为开放，支持<ruby>侧载<rp>(</rp><rt>sideload</rt><rp>)</rp></ruby>的 macOS 中的图标也不尽人意，缺乏规范约束后奇行种层出不穷。我使用了 Pictogram 以及大家在 [macOSicons](https://macosicons.com) 上分享的图标对其进行了改造，姑且算是工整了。
 
 下面列出了一些我在使用 macOS 后才开始使用或 macOS 独占的软件：
 
