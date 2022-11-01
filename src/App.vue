@@ -20,6 +20,11 @@ useHead({
     { rel: 'alternate', href: '/feed.xml', title: `${site.title}'s RSS 2.0`, type: 'application/atom+xml' },
     { rel: 'alternate', href: '/feed.atom', title: `${site.title}'s Atom RSS`, type: 'application/rss+xml' },
     { rel: 'alternate', href: '/feed.atom', title: `${site.title}'s JSON Feed`, type: 'application/feed+json' },
+    { rel: 'me', href: 'https://github.com/kecrily' },
+    { rel: 'me', href: 'https://twitter.com/kecrily' },
+    { rel: 'me', href: 'mailto:kecrily@gmail.com' },
+    { rel: 'pgpkey authn', href: 'https://keys.openpgp.org/vks/v1/by-fingerprint/E6DE7E6D8EF5D458CE205C00A1803D3315E6CCBC' },
+    { rel: 'authorization_endpoint', href: 'https://indieauth.com/auth' },
   ],
 })
 </script>
