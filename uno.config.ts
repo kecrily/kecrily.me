@@ -42,7 +42,7 @@ export default defineConfig({
     presetUno(),
     presetTypography({ cssExtend }),
     presetAttributify({ strict: true }),
-    presetIcons(),
+    presetIcons({ prefix: '' }),
     presetTagify(),
   ],
   transformers: [
