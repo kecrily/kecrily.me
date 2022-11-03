@@ -14,10 +14,24 @@ const markdown = MarkdownIt({
 export async function buildFeed() {
   const files = await fg('content/post/*.md')
 
-  const options = {
+  const posts: any[] = (
+    await Promise.all(
+      files.map(async(i) => {
+        const raw = await fs.readFile(i, 'utf-8')
+        const { data, content } = matter(raw)
+        const html = markdown.render(content)
+
+        return { ...data, content: html }
+      }),
+    ))
+    .filter(Boolean)
+
+  posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
+
+  const feed = new Feed({
+    id: site.canonical,
     title: site.title,
     description: site.description,
-    id: site.canonical,
     link: site.canonical,
     copyright: '',
     feedLinks: {
@@ -30,25 +44,8 @@ export async function buildFeed() {
       link: site.canonical,
     },
     favicon: `${site.canonical}/favicon.ico`,
-  }
-  const posts: any[] = (
-    await Promise.all(
-      files.map(async(i) => {
-        const raw = await fs.readFile(i, 'utf-8')
-        const { data, content } = matter(raw)
-        const html = markdown.render(content)
-
-        return {
-          ...data,
-          content: html,
-        }
-      }),
-    ))
-    .filter(Boolean)
-
-  posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
-
-  const feed = new Feed(options)
+    image: `${site.canonical}/favicon.ico`,
+  })
 
   posts.forEach(item => feed.addItem(item))
 
