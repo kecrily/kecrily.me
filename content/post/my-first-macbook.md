@@ -5,19 +5,19 @@ description: 买了台 MacBook Air，其实我早在 8 月底就拿到了，但�
 tags:
   - macOS
   - MacBook
-cover: macbook-air-desktop.webp
+cover: /images/macbook-air-desktop.webp
 ---
 
 <script setup>
 import { LottieAnimation } from 'lottie-web-vue'
-import Hello from '../assets/hello.json'
+import Hello from '../../src/assets/hello.json'
 </script>
 
 <LottieAnimation class="rounded-lg border h-[36vh]" :animationData="Hello" :loop="true" />
 
 买了台 MacBook Air，其实我早在 8 月底就拿到了，但因为博客在半年前 💀 后还未复活就文章也就随着一拖再拖。
 
-![使用默认壁纸的 MacBook Air 桌面](../assets/macbook-air-desktop.webp)
+![使用默认壁纸的 MacBook Air 桌面](/images/macbook-air-desktop.webp)
 
 Apple 一直有对中国大陆和香港、澳门等地区所发售的设备进行限制。在初始化 macOS 时就需要避免选择这些地区以躲开地区锁限制[^1]，当然也可以选择在初始化完成后再自行修改地区。
 
@@ -41,8 +41,8 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 之前就有看到几位朋友的博客里有写对 macOS 反人类的 Caps Lock 切换语言进行魔改的文章，也正因此在选购时我选择了美式键盘而非中文（拼音）键盘，将 Caps Lock 键上的文字改成「中/英」纯粹是 Apple 自作聪明的本地化，极其失败。
 
-![美式英文妙控键盘](../assets//magic-keyboard-us.webp)
-![中文（拼音）妙控键盘](../assets//magic-keyboard-ch.webp)
+![美式英文妙控键盘](/images/magic-keyboard-us.webp)
+![中文（拼音）妙控键盘](/images/magic-keyboard-ch.webp)
 
 在使用时我并没有尝试像其他一样尝试着接受或是使用 Karabiner 之类的软件进行改键。我注意到在 fn 键上有一个 🌐 的图标，我想这才应该是切换语言功能的归属。
 
@@ -54,7 +54,7 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 遭人诟病的刘海对我来说还好，唯一的缺憾就是当应用菜单与状态菜单内容过多时，就会嫌弃刘海占了一部分空间。当然这也和我使用的并非默认分辨率有很大关系，所幸遇到应用菜单最多的也就 Chrome 而已。
 
-![当打开 Chrome 时的菜单栏，数量巨大的应用菜单和刘海让菜单栏空间所剩无几](./../assets/chrome-menu-bar-on-macos.webp)
+![当打开 Chrome 时的菜单栏，数量巨大的应用菜单和刘海让菜单栏空间所剩无几](/images/chrome-menu-bar-on-macos.webp)
 
 ---
 

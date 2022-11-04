@@ -25,13 +25,11 @@ useHead({
   ],
 })
 
-const cover = new URL(`../../content/assets/${md.cover}`, import.meta.url).href
-
 if (md.cover) {
   useHead({ meta: [
-    { property: 'og:image', content: cover },
+    { property: 'og:image', content: md.cover },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:image', content: cover },
+    { name: 'twitter:image', content: md.cover },
   ] })
 }
 
