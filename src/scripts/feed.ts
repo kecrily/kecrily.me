@@ -17,11 +17,18 @@ export async function buildFeed() {
   const posts: any[] = (
     await Promise.all(
       files.map(async(i) => {
+        const path = i.split('/').slice(-1)[0].replace('.md', '')
         const raw = await fs.readFile(i, 'utf-8')
         const { data, content } = matter(raw)
         const html = markdown.render(content)
 
-        return { ...data, content: html }
+        return {
+          ...data,
+          id: path,
+          link: `${site.canonical}/${path}`,
+          image: site.canonical + data.cover,
+          content: html,
+        }
       }),
     ))
     .filter(Boolean)
