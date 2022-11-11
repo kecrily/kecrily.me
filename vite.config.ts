@@ -52,7 +52,6 @@ export default defineConfig({
           attrs: { target: '_blank', rel: 'noopener' },
         })
 
-        // eslint-disable-next-line camelcase
         md.renderer.rules.footnote_block_open = () => '<hr><section><ol>'
       },
     }),
