@@ -25,7 +25,7 @@ export async function buildFeed() {
         return {
           ...data,
           id: path,
-          link: `${site.canonical}/${path}`,
+          link: `${site.canonical}/post/${path}`,
           image: site.canonical + data.cover,
           content: html,
         }
