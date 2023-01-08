@@ -25,13 +25,13 @@ gpg --expert --full-gen-key
 生成好密钥后就需要添加子密钥，有三个子密钥，分别对应着三个用途 **S**ign、**A**uthentication、**E**ncrypt。
 
 ```sh
-gpg --edit-key <uid>
+gpg --expert --edit-key <uid>
 ```
 
 现在备份私钥时默认主密钥和子密钥一起，所以一次就好。
 
 ```sh
-gpg gpg --armour --export-secret-keys <uid>
+gpg --armour --export-secret-keys <uid>
 ```
 
 把公钥往 [Keys OpenPGP](https://keys.openpgp.org/) 上传一份，本地也不用备份。
