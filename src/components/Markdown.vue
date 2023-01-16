@@ -49,6 +49,5 @@ if (md.lang) {
       <div>{{ Math.round(time as number) }} mins</div>
     </div>
     <slot />
-    <Comment />
   </article>
 </template>
