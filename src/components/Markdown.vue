@@ -41,9 +41,9 @@ if (md.lang) {
 </script>
 
 <template>
-  <article prose>
+  <article class="prose">
     <h1>{{ md.title }}</h1>
-    <div flex mb-4>
+    <div class="flex mb-4">
       <time :datetime="md.date">{{ formatTime(md.date) }}</time>
       <Dot />
       <div>{{ Math.round(time as number) }} mins</div>
