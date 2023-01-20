@@ -58,7 +58,7 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 ---
 
-在使用 Windows 的时候没有使用专门的剪贴板增强软件，系统自带的 <kbr>Win + V</kbr> 剪贴板历史功能对我来说就足以。而 macOS 没有在系统级实现此功能，只好找个增强软件了。macOS 上的多种多样的启动器一直让我羡慕不已，也曾尝试过 Windows 上的类似产品 Powertoys Run，但没法使用第三方扩展，不大好用也就作罢。
+在使用 Windows 的时候没有使用专门的剪贴板增强软件，系统自带的 <kbd>Win + V</kbd> 剪贴板历史功能对我来说就足以。而 macOS 没有在系统级实现此功能，只好找个增强软件了。macOS 上的多种多样的启动器一直让我羡慕不已，也曾尝试过 Windows 上的类似产品 Powertoys Run，但没法使用第三方扩展，不大好用也就作罢。
 
 这回用来解决剪贴板历史需求的也是个启动器——[Raycast](https://www.raycast.com/)。一开始使用其实使用的是开源的 [Maccy](https://github.com/p0deje/Maccy)，在等 MacBook 到的过程中就收集了一个大家推荐软件的列表，所以初始化完就是体验各种软件。体验到 Raycast 时发现了它自带剪贴板历史，基本满足我的需求也就没必要下载单独一个剪贴板增强软件了，软件喜减一。
 
@@ -87,4 +87,3 @@ Apple 生态下的应用图标受到 Apple 设计规范的约束，在生态中�
 下次买电脑应该要好几年后了，这回就这样了。
 
 [^1]: 如无法显示中华民国国旗 🇹🇼 等
-[^2]: 大部分数据来自于 Apple 所公开的[《MacBook Air (M2, 2022) - 技术规格》](https://support.apple.com/kb/SP869)
