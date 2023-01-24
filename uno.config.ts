@@ -14,19 +14,18 @@ const cssExtend: Record<string, CSSObject> = {
     'width': '14%',
     'margin-right': 'auto',
     'margin-left': 'auto',
-    'border-top': '3px solid #dededc'
+    'border-top': '.2rem solid #dededc'
   },
   'blockquote': {
-    'margin-left': '-24px',
-    'padding-left': '20px',
-    'border-left-width': '4px',
-    'border-left': '3px solid #dadada',
+    'margin-left': '-1.5rem',
+    'padding-left': '1.25rem',
+    'border-left': '.25rem solid #dadada',
     'color': '#666664',
     'font-style': 'normal'
   },
   'th, td': {
-    border: '1px solid #dadada',
-    padding: '4px 8px 4px 10px'
+    border: '.125rem solid #dadada',
+    padding: '.25rem .5rem .25rem .625rem'
   },
   'th:empty': {
     border: 'none',
