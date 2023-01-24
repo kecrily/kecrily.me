@@ -40,7 +40,7 @@ useHead({
 @import '@unocss/reset/tailwind.css';
 
 body {
-  @apply p-8 mx-auto;
+  @apply p-8 mx-auto bg-base text-base;
   max-width: 70ch;
 }
 </style>

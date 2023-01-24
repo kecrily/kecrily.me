@@ -20,8 +20,9 @@ const cssExtend: Record<string, CSSObject> = {
     'margin-left': '-1.5rem',
     'padding-left': '1.25rem',
     'border-left': '.25rem solid #dadada',
-    'color': '#666664',
-    'font-style': 'normal'
+    'color': 'inherit',
+    'font-style': 'normal',
+    'opacity': '.8'
   },
   'th, td': {
     border: '.125rem solid #dadada',
@@ -37,8 +38,12 @@ const cssExtend: Record<string, CSSObject> = {
 }
 
 export default defineConfig({
+  shortcuts: {
+    'bg-base': 'dark:bg-[#0E141B]',
+    'text-base': 'dark:text-[#D6D3D1]'
+  },
   presets: [
-    presetUno(),
+    presetUno({ dark: 'media' }),
     presetTypography({ cssExtend }),
     presetAttributify({ strict: true }),
     presetIcons({ prefix: '' }),
