@@ -3,18 +3,18 @@ import {
   defineConfig,
   presetAttributify, presetIcons, presetTagify,
   presetTypography, presetUno,
-  transformerDirectives, transformerVariantGroup,
+  transformerDirectives, transformerVariantGroup
 } from 'unocss'
 
 const cssExtend: Record<string, CSSObject> = {
   'li>p': {
-    margin: 0,
+    margin: 0
   },
   'hr': {
     'width': '14%',
     'margin-right': 'auto',
     'margin-left': 'auto',
-    'border-top': '3px solid #dededc',
+    'border-top': '3px solid #dededc'
   },
   'blockquote': {
     'margin-left': '-24px',
@@ -22,19 +22,19 @@ const cssExtend: Record<string, CSSObject> = {
     'border-left-width': '4px',
     'border-left': '3px solid #dadada',
     'color': '#666664',
-    'font-style': 'normal',
+    'font-style': 'normal'
   },
   'th, td': {
     border: '1px solid #dadada',
-    padding: '4px 8px 4px 10px',
+    padding: '4px 8px 4px 10px'
   },
   'th:empty': {
     border: 'none',
-    padding: 'none',
+    padding: 'none'
   },
   'tr:nth-child(even)': {
-    'background-color': '#efefee',
-  },
+    'background-color': '#efefee'
+  }
 }
 
 export default defineConfig({
@@ -43,10 +43,10 @@ export default defineConfig({
     presetTypography({ cssExtend }),
     presetAttributify({ strict: true }),
     presetIcons({ prefix: '' }),
-    presetTagify(),
+    presetTagify()
   ],
   transformers: [
     transformerDirectives(),
-    transformerVariantGroup(),
-  ],
+    transformerVariantGroup()
+  ]
 })

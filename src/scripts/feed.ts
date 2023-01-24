@@ -8,7 +8,7 @@ import { site } from '../composables'
 const markdown = MarkdownIt({
   html: true,
   breaks: true,
-  linkify: true,
+  linkify: true
 })
 
 export async function buildFeed() {
@@ -27,9 +27,9 @@ export async function buildFeed() {
           id: path,
           link: `${site.canonical}/post/${path}`,
           image: data.cover ? site.canonical + data.cover : false,
-          content: html,
+          content: html
         }
-      }),
+      })
     ))
     .filter(Boolean)
 
@@ -44,14 +44,14 @@ export async function buildFeed() {
     feedLinks: {
       rss: `${site.canonical}/feed.xml`,
       atom: `${site.canonical}/feed.atom`,
-      json: `${site.canonical}/feed.json`,
+      json: `${site.canonical}/feed.json`
     },
     author: {
       name: site.title,
-      link: site.canonical,
+      link: site.canonical
     },
     favicon: `${site.canonical}/favicon.ico`,
-    image: `${site.canonical}/favicon.ico`,
+    image: `${site.canonical}/favicon.ico`
   })
 
   posts.forEach(item => feed.addItem(item))

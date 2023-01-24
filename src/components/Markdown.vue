@@ -18,24 +18,24 @@ useHead({
     { property: 'article:tag', content: md.tags.join(', ') },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:title', content: md.title },
-    { name: 'twitter:description', content: md.description },
+    { name: 'twitter:description', content: md.description }
   ],
   link: [
-    { rel: 'canonical', href: site.canonical + path },
-  ],
+    { rel: 'canonical', href: site.canonical + path }
+  ]
 })
 
 if (md.cover) {
   useHead({ meta: [
     { property: 'og:image', content: md.cover },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:image', content: md.cover },
+    { name: 'twitter:image', content: md.cover }
   ] })
 }
 
 if (md.lang) {
   useHead({
-    htmlAttrs: { lang: 'zh-cmn-Hans-CN' },
+    htmlAttrs: { lang: 'zh-cmn-Hans-CN' }
   })
 }
 </script>

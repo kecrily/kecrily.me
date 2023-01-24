@@ -13,7 +13,7 @@ useHead({
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:creator', content: '@kecrily' },
     { name: 'twitter:title', content: site.title },
-    { name: 'twitter:description', content: site.description },
+    { name: 'twitter:description', content: site.description }
   ],
   link: [
     { rel: 'canonical', href: site.canonical },
@@ -26,8 +26,8 @@ useHead({
     { rel: 'pgpkey authn', href: 'https://keys.openpgp.org/vks/v1/by-fingerprint/6492E00686064BD8561BADBDA2547DFF0237D6EC' },
     { rel: 'authorization_endpoint', href: 'https://indieauth.com/auth' },
     { rel: 'webmention', href: 'https://webmention.io/kecrily.me/webmention' },
-    { rel: 'pingback', href: 'https://webmention.io/kecrily.me/xmlrpc' },
-  ],
+    { rel: 'pingback', href: 'https://webmention.io/kecrily.me/xmlrpc' }
+  ]
 })
 </script>
 

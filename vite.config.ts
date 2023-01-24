@@ -29,13 +29,13 @@ export default defineConfig({
     include: [
       'vue',
       'vue-router',
-      '@vueuse/head',
-    ],
+      '@vueuse/head'
+    ]
   },
   plugins: [
     Vue({
       reactivityTransform: true,
-      include: [/\.vue$/, /\.md$/],
+      include: [/\.vue$/, /\.md$/]
     }),
     Markdown({
       headEnabled: true,
@@ -49,11 +49,11 @@ export default defineConfig({
 
         md.use(LinkAttributes, {
           matcher: (link: string) => /^https?:\/\//.test(link),
-          attrs: { target: '_blank', rel: 'noopener' },
+          attrs: { target: '_blank', rel: 'noopener' }
         })
 
         md.renderer.rules.footnote_block_open = () => '<hr><section><ol>'
-      },
+      }
     }),
     Pages({
       dirs: 'content',
@@ -67,25 +67,25 @@ export default defineConfig({
         route.meta = {
           time: readingTime(md).minutes,
           ...data,
-          ...route.meta,
+          ...route.meta
         }
 
         return { ...route }
-      },
+      }
     }),
     Unocss(),
     AutoImport({
       vueTemplate: true,
       imports: ['vue', 'vue/macros', 'vue-router', '@vueuse/head'],
       dirs: ['src/composables'],
-      dts: 'src/types/auto-imports.d.ts',
+      dts: 'src/types/auto-imports.d.ts'
     }),
     Components({
       extensions: ['vue', 'md'],
       include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
-      dts: 'src/types/components.d.ts',
+      dts: 'src/types/components.d.ts'
     }),
-    Inspect(),
+    Inspect()
   ],
   ssgOptions: {
     script: 'async',
@@ -93,6 +93,6 @@ export default defineConfig({
     async onFinished() {
       generateSitemap({ hostname: site.canonical })
       await buildFeed()
-    },
-  },
+    }
+  }
 })

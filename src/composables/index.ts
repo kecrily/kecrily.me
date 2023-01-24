@@ -4,7 +4,7 @@ export const site = {
   title: 'Percy Ma',
   canonical: 'https://kecrily.me',
   description: '让世界听到你的声音 | Let the world hear you',
-  keywords: ['kecrily', 'blog', 'coder'],
+  keywords: ['kecrily', 'blog', 'coder']
 }
 
 export interface Markdown extends RouteRecordNormalized {
@@ -26,7 +26,7 @@ export function getRoutes() {
       description: i.meta.description,
       tags: i.meta.tags,
       cover: i.meta.cover,
-      ...i,
+      ...i
     })
     .filter(i => i.date)
 }
@@ -35,6 +35,6 @@ export function formatTime(raw: string | Date) {
   return new Date(raw).toLocaleDateString('en-us', {
     year: 'numeric',
     month: 'short',
-    day: 'numeric',
+    day: 'numeric'
   })
 }
