@@ -1,7 +1,3 @@
-<script lang="ts" setup>
-import { site } from '../composables'
-</script>
-
 <template>
   <header class="flex items-baseline justify-between">
     <RouterLink to="/" class="font-semibold text-lg">

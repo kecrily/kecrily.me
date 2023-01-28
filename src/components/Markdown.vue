@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Markdown, formatTime } from '../composables'
+import type { Markdown } from '../composables'
 
 const { path } = useRoute()
 const { frontmatter: md } = defineProps<{frontmatter: Markdown}>()

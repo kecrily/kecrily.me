@@ -1,6 +1,4 @@
 <script lang="ts" setup>
-import { formatTime } from '../src/composables'
-
 const posts = getRoutes().filter(i => i.path.startsWith('/post'))
 </script>
 
