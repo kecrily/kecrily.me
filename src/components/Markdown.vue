@@ -26,18 +26,18 @@ useHead({
 })
 
 if (md.cover) {
-  useHead({ meta: [
-    { property: 'og:image', content: md.cover },
-    { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:image', content: md.cover }
-  ] })
-}
-
-if (md.lang) {
   useHead({
-    htmlAttrs: { lang: 'zh-cmn-Hans-CN' }
+    meta: [
+      { property: 'og:image', content: md.cover },
+      { name: 'twitter:card', content: 'summary_large_image' },
+      { name: 'twitter:image', content: md.cover }
+    ]
   })
 }
+
+if (md.lang)
+  useHead({ htmlAttrs: { lang: md.lang } })
+
 </script>
 
 <template>
