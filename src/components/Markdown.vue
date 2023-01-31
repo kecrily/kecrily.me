@@ -3,8 +3,10 @@ import { $fetch } from 'ofetch'
 import type { Markdown } from '../composables'
 
 const { path } = useRoute()
-const { frontmatter: md } = defineProps<{frontmatter: Markdown}>()
-const { meta: { time } } = getRoutes().filter(i => i.path === path)[0]
+const { frontmatter: md } = defineProps<{ frontmatter: Markdown }>()
+const { meta: { time } } = getRoutes().filter(i =>
+  i.path === path || `${i.path}/` === path
+)[0]
 
 const url = site.canonical + useRoute().path
 
