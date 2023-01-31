@@ -21,6 +21,7 @@ specifiers:
   markdown-it-footnote: ^3.0.3
   markdown-it-link-attributes: ^4.0.1
   markdown-it-shiki: ^0.7.2
+  ofetch: ^1.0.0
   reading-time: ^1.5.0
   typescript: ^4.9.4
   unocss: ^0.49.1
@@ -61,6 +62,7 @@ devDependencies:
   markdown-it-footnote: 3.0.3
   markdown-it-link-attributes: 4.0.1
   markdown-it-shiki: 0.7.2
+  ofetch: 1.0.0
   reading-time: 1.5.0
   typescript: 4.9.4
   unocss: 0.49.1_vite@4.0.4
@@ -3747,6 +3749,14 @@ packages:
       call-bind: 1.0.2
       define-properties: 1.1.4
       es-abstract: 1.21.1
+    dev: true
+
+  /ofetch/1.0.0:
+    resolution: {integrity: sha512-d40aof8czZFSQKJa4+F7Ch3UC5D631cK1TTUoK+iNEut9NoiCL+u0vykl/puYVUS2df4tIQl5upQcolIcEzQjQ==}
+    dependencies:
+      destr: 1.2.2
+      node-fetch-native: 1.0.1
+      ufo: 1.0.1
     dev: true
 
   /ohmyfetch/0.4.21:

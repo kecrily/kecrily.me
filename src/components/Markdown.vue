@@ -1,9 +1,16 @@
 <script lang="ts" setup>
+import { $fetch } from 'ofetch'
 import type { Markdown } from '../composables'
 
 const { path } = useRoute()
 const { frontmatter: md } = defineProps<{frontmatter: Markdown}>()
 const { meta: { time } } = getRoutes().filter(i => i.path === path)[0]
+
+const url = site.canonical + useRoute().path
+
+const { children } = await $fetch('https://webmention.io/api/mentions.jf2', {
+  query: { target: url }
+})
 
 useHead({
   title: md.title,
@@ -37,7 +44,6 @@ if (md.cover) {
 
 if (md.lang)
   useHead({ htmlAttrs: { lang: md.lang } })
-
 </script>
 
 <template>
@@ -50,4 +56,6 @@ if (md.lang)
     </div>
     <slot />
   </article>
+
+  <Comment v-if="children.length" :data="children" />
 </template>

@@ -7,6 +7,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    Comment: typeof import('./../components/Comment.vue')['default']
     Dot: typeof import('./../components/Dot.vue')['default']
     Header: typeof import('./../components/Header.vue')['default']
     Markdown: typeof import('./../components/Markdown.vue')['default']

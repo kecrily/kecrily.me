@@ -33,7 +33,9 @@ useHead({
 
 <template>
   <Header />
-  <RouterView />
+  <Suspense>
+    <RouterView />
+  </Suspense>
 </template>
 
 <style>
