@@ -33,7 +33,7 @@ const cssExtend: Record<string, CSSObject> = {
     padding: 'none'
   },
   'tr:nth-child(even)': {
-    'background-color': '#efefee'
+    'background-color': '#EFEFEE'
   }
 }
 

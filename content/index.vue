@@ -3,7 +3,7 @@ const posts = getRoutes().filter(i => i.path.startsWith('/post'))
 </script>
 
 <template>
-  <div class="leading-9 mt-4">
+  <div class="leading-9 mt-4" role="list">
     <div v-for="post in posts" :key="post.path" class="flex">
       <RouterLink :to="post.path">{{ post.title }}</RouterLink>
       <hr>
