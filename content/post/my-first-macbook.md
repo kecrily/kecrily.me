@@ -1,7 +1,8 @@
 ---
-title: My first MacBook is Air
-date: 2022-10-18
-description: 买了台 MacBook Air，其实我早在 8 月底就拿到了，但因为博客在半年前 💀 后还未复活就文章也就随着一拖再拖。
+title: 第一台 MacBook Air
+date: 2022-10-18 17:10:00+08
+description: |
+  买了台 MacBook Air，其实我早在 8 月底就拿到了，但因为博客在半年前 💀 后还未复活就文章也就随着一拖再拖。分享一下初次使用 macOS 系统遇到的一些糙点以及如何解决/缓解从 Windows 过来的不适感。
 tags:
   - macOS
   - MacBook
@@ -68,7 +69,7 @@ sudo defaults write /Library/Preferences/.GlobalPreferences.plist Country "US"
 
 > 工欲善其事，必先利其器
 
-Apple 生态下的应用图标受到 Apple 设计规范的约束，在生态中最为开放，支持<ruby>侧载<rp>(</rp><rt>sideload</rt><rp>)</rp></ruby>的 macOS 中的图标也不尽人意，缺乏规范约束后奇行种层出不穷。我使用了 Pictogram 以及大家在 [macOSicons](https://macosicons.com) 上分享的图标对其进行了改造，姑且算是工整了。
+Apple 生态下的应用图标受到 Apple 设计规范的约束，在生态中最为开放，支持<ruby>侧载<rp>(</rp><rt>sideload</rt><rp>)</rp></ruby>的 macOS 中的图标也不尽人意，缺乏规范约束后奇行种层出不穷。我使用了 [Pictogram](https://pictogramapp.com/) 以及大家在 [macOSicons](https://macosicons.com) 上分享的图标对其进行了改造，姑且算是工整了。
 
 下面列出了一些我在使用 macOS 后才开始使用或 macOS 独占的软件：
 
@@ -77,7 +78,7 @@ Apple 生态下的应用图标受到 Apple 设计规范的约束，在生态中�
 - [Fig](https://fig.io/)——基本解决了手动配置 auto-complete 的麻烦
 - [NetNewsWire](https://github.com/Ranchero-Software/NetNewsWire)——RSS 订阅器
 - [AppCleaner](https://freemacsoft.net/appcleaner/)——清理直接卸载时不会移除的数据
-- [Pictogram](https://pictogramapp.com/)——矫正异形应用图标
+- Pictogram——矫正异形应用图标
 - [HiddenBar](https://github.com/dwarvesf/hidden)——隐藏动态菜单中的无用图标
 
 其实看得出来后三个应用是在解决 Apple 没有做/做好的功能。不过它们都还挺轻量，还能接受，也不知道什么时候可以不再需要它们。

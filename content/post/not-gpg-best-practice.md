@@ -1,8 +1,10 @@
 ---
 title: 不是 GPG 最佳实践
-date: 2023-01-02
-description: 因为 GitHub 没能识别出我的新子密钥，于是乎就按最新想法重新鼓捣了一遍 GPG 密钥。
+date: 2023-01-02 23:19:00+08
+description: |
+  因为 GitHub 没能识别出我新添加的子密钥，让我在开源活动中痛失姓名，别人无法确认我是不是我。于是乎只能被迫也顺便按最新想法和其他人分享的最佳实践重新鼓捣了一遍 GPG 密钥。
 tags:
+  - git
   - GPG
 ---
 
@@ -36,7 +38,7 @@ gpg --armour --export-secret-keys <uid>
 
 把公钥往 [Keys OpenPGP](https://keys.openpgp.org/) 上传一份，本地也不用备份。
 
-```sh
+```ini
 ~/.gnupg/dirmngr.conf
 keyserver hkp://keys.openpgp.org
 ```
