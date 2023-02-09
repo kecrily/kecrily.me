@@ -10,7 +10,7 @@ import Components from 'unplugin-vue-components/vite'
 import Inspect from 'vite-plugin-inspect'
 
 // markdown
-import matter from 'gray-matter'
+import { parse as matter } from 'ultramatter'
 import Shiki from 'markdown-it-shiki'
 import LinkAttributes from 'markdown-it-link-attributes'
 // @ts-expect-error missing types
@@ -62,11 +62,11 @@ export default defineConfig({
         const path = resolve(__dirname, route.component.slice(1))
 
         const md = readFileSync(path, 'utf-8')
-        const { data } = matter(md)
+        const { frontmatter } = matter(md)
 
         route.meta = {
           time: readingTime(md).minutes,
-          ...data,
+          ...frontmatter,
           ...route.meta
         }
 

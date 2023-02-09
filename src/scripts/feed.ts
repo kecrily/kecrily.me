@@ -1,6 +1,6 @@
 import fs from 'node:fs/promises'
 import fg from 'fast-glob'
-import matter from 'gray-matter'
+import { parse } from 'ultramatter'
 import MarkdownIt from 'markdown-it'
 import { Feed } from 'feed'
 import { site } from '../composables'
@@ -14,23 +14,23 @@ const markdown = MarkdownIt({
 export async function buildFeed() {
   const files = await fg('content/post/*.md')
 
-  const posts: any[] = (
-    await Promise.all(
-      files.map(async(i) => {
-        const path = i.split('/').slice(-1)[0].replace('.md', '')
-        const raw = await fs.readFile(i, 'utf-8')
-        const { data, content } = matter(raw)
-        const html = markdown.render(content)
+  const posts: any[] = (await Promise.all(
+    files.map(async(i) => {
+      const path = i.split('/').slice(-1)[0].replace('.md', '')
+      const raw = await fs.readFile(i, 'utf-8')
+      const { frontmatter, content } = parse(raw)
+      const html = markdown.render(content)
 
-        return {
-          ...data,
-          id: path,
-          link: `${site.canonical}/post/${path}`,
-          image: data.cover ? site.canonical + data.cover : false,
-          content: html
-        }
-      })
-    ))
+      return {
+        ...frontmatter,
+        date: new Date(frontmatter!.date),
+        id: path,
+        link: `${site.canonical}/post/${path}`,
+        image: frontmatter!.cover ? site.canonical + frontmatter!.cover : false,
+        content: html
+      }
+    })
+  ))
     .filter(Boolean)
 
   posts.sort((a, b) => +new Date(b.date) - +new Date(a.date))
