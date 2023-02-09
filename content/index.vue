@@ -3,8 +3,8 @@ const posts = getRoutes().filter(i => i.path.startsWith('/post'))
 </script>
 
 <template>
-  <div class="leading-9 mt-4" role="list">
-    <div v-for="post in posts" :key="post.path" class="flex">
+  <div class="mt-4 space-y-2" role="list">
+    <div v-for="post in posts" :key="post.path" class="flex" role="listitem">
       <RouterLink :to="post.path">{{ post.title }}</RouterLink>
       <hr>
       <time :datetime="post.date">{{ formatTime(post.date) }}</time>
