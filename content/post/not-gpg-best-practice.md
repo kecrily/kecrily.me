@@ -2,15 +2,16 @@
 title: 不是 GPG 最佳实践
 date: 2023-01-02 23:19:00+08
 description: |
-  因为 GitHub 没能识别出我新添加的子密钥，让我在开源活动中痛失姓名，别人无法确认我是不是我。于是乎只能被迫也顺便按最新想法和其他人分享的最佳实践重新鼓捣了一遍 GPG 密钥。
+  因为 GitHub 没能识别出我新添加的子密钥，让我在开源活动中痛失姓名，别人无法确认我是不是我。于是乎只能被迫也顺便按最新想法和其他人分享的最佳实践重新鼓捣了一遍 PGP 密钥。
 tags:
-  - git
-  - GPG
+  - Git
+  - GunPG
+  - OpenPGP
 ---
 
 前一段时间发现自己的 GPG 实践安全性不够，主密钥被我拿来用作 Git 签名了。发现后我就立马变更了主密钥的用途为仅认证，并新增了一个专门用于签名的子密钥。
 
-但更新 GitHub GPG 公钥后，它一直识别不出我新创建的子密钥，而其他 Git 托管平台都能正常识别，不出意外应该是平台的问题。发了个工单向 GitHub 报告，十几天了没能解决，他们有尝试提供一些方案，但很遗憾一一尝试后都不行。也有转交给开发者，但暂时石沉大海。
+但在 GitHub 上更新 PGP 公钥后，它一直识别不出我新创建的子密钥，而其他 Git 托管平台都能正常识别，不出意外应该是平台的问题。发了个工单向 GitHub 报告，十几天了没能解决，他们有尝试提供一些方案，但很遗憾一一尝试后都不行。也有转交给开发者，但暂时石沉大海。
 
 等待期间我的 commit 都变成 `unverified` 了，这让我在参与开源项目时很不方便，我没法证明我是我自己。
 
@@ -36,7 +37,7 @@ gpg --expert --edit-key <uid>
 gpg --armour --export-secret-keys <uid>
 ```
 
-把公钥往 [Keys OpenPGP](https://keys.openpgp.org/) 上传一份，本地也不用备份。
+把公钥往 [keys.openpgp.org](https://keys.openpgp.org/) 上传一份，本地也不用备份。
 
 ```ini
 ~/.gnupg/dirmngr.conf
@@ -44,3 +45,5 @@ keyserver hkp://keys.openpgp.org
 ```
 
 好了，如果再没有增删改过子密钥就只要恢复密钥备份然后再从 keyserver 拉取最新版本的公钥就好了。
+
+我的 PGP 密钥：[`6492 E006 8606 4BD8 561B ADBD A254 7DFF 0237 D6EC`](https://keys.openpgp.org/vks/v1/by-fingerprint/6492E00686064BD8561BADBDA2547DFF0237D6EC)
