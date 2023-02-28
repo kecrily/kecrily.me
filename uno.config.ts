@@ -34,6 +34,10 @@ const cssExtend: Record<string, CSSObject> = {
   },
   'tr:nth-child(even)': {
     'background-color': '#EFEFEE'
+  },
+  'p code': {
+    'white-space': 'normal',
+    'word-wrap': 'break-word'
   }
 }
 
