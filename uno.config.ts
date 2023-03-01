@@ -7,6 +7,9 @@ import {
 } from 'unocss'
 
 const cssExtend: Record<string, CSSObject> = {
+  'p': {
+    'line-break': 'loose'
+  },
   'li>p': {
     margin: 0
   },
