@@ -11,7 +11,47 @@ tags:
 
 前一段时间发现自己的 GPG 实践安全性不够，主密钥被我拿来用作 Git 签名了。发现后我就立马变更了主密钥的用途为仅认证，并新增了一个专门用于签名的子密钥。
 
-但在 GitHub 上更新 PGP 公钥后，它一直识别不出我新创建的子密钥，而其他 Git 托管平台都能正常识别，不出意外应该是平台的问题。发了个工单向 GitHub 报告，十几天了没能解决，他们有尝试提供一些方案，但很遗憾一一尝试后都不行。也有转交给开发者，但暂时石沉大海。
+但在 GitHub 上更新 PGP 公钥后，它一直识别不出我新创建的子密钥，而其他 Git 托管平台都能正常识别，不出意外应该是平台的问题。发了个工单向 GitHub 报告，十几天了没能解决，他们有尝试提供一些方案，但很遗憾一一尝试后都不行。~~也有转交给开发者，但暂时石沉大海~~。GitHub 在工单关闭后的二十三天后给出了解决方案，确实可以解决我的问题，但我已经改用了新的密钥。
+
+<details>
+GitHub (GitHub Support)
+Feb 24, 2023, 10:20 PM UTC
+
+Hey Percy,
+
+I just wanted to touch bases with some follow-up information regarding your previous inquiry in `1905199`, as I've now encountered this specific problem a few more times.
+
+About the error output:
+
+```sh
+BAD subkeys:
+1
+AC1F08ADDE171338 error: openpgp: invalid data: subkey signature invalid: openpgp: invalid data: signing subkey is missing cross-signature
+```
+
+This can typically be addressed by visiting [here](https://www.gnupg.org/faq/subkey-cross-certify.html) and following the instructions.
+
+You can also sign a test commit locally and check for this specific problem:
+
+```sh
+$ git verify-commit 2cd603b73ae49588e3add24a2df57e71597dd2e1
+gpg: Signature made Wed Feb  8 15:40:38 2023 PST
+gpg:                using RSA key 7B408B746F5D76F35ECA013D3EFA9A554F4A6789
+gpg: WARNING: signing subkey 3EFA9A554F4A6789 is not cross-certified
+gpg: please see https://gnupg.org/faq/subkey-cross-certify.html for more information
+gpg: Can't check signature: General error
+```
+
+Once the key has been cross-certified and exported/uploaded again, our system should recognize it.
+
+I'm truly sorry that I wasn't able to better address your issue the first time around, but I hope this information may prove helpful to you in the future. 🙇🏻‍♂️
+
+Best regards,
+
+Allan H
+
+GitHub Support
+</details>
 
 等待期间我的 commit 都变成 `unverified` 了，这让我在参与开源项目时很不方便，我没法证明我是我自己。
 
