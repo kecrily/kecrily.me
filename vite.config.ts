@@ -91,7 +91,7 @@ export default defineConfig({
     script: 'async',
     formatting: 'minify',
     async onFinished() {
-      generateSitemap({ hostname: site.canonical })
+      generateSitemap({ hostname: site.canonical, generateRobotsTxt: false })
       await buildFeed()
     }
   }
