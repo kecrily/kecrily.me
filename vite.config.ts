@@ -2,7 +2,7 @@ import { resolve } from 'node:path'
 import { readFileSync } from 'node:fs'
 import { defineConfig } from 'vite'
 import Vue from '@vitejs/plugin-vue'
-import Markdown from 'vite-plugin-vue-markdown'
+import Markdown from 'unplugin-vue-markdown/vite'
 import Pages from 'vite-plugin-pages'
 import Unocss from 'unocss/vite'
 import AutoImport from 'unplugin-auto-import/vite'
@@ -26,17 +26,10 @@ import { site } from './src/composables'
 
 export default defineConfig({
   optimizeDeps: {
-    include: [
-      'vue',
-      'vue-router',
-      '@vueuse/head'
-    ]
+    include: ['vue', 'vue-router', '@vueuse/head']
   },
   plugins: [
-    Vue({
-      reactivityTransform: true,
-      include: [/\.vue$/, /\.md$/]
-    }),
+    Vue({ include: [/\.vue$/, /\.md$/] }),
     Markdown({
       headEnabled: true,
       wrapperComponent: 'Markdown',
