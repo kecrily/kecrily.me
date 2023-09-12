@@ -9,13 +9,6 @@ tags:
 cover: /images/macbook-air-desktop.webp
 ---
 
-<script setup>
-import { LottieAnimation } from 'lottie-web-vue'
-import Hello from '../../src/assets/hello.json'
-</script>
-
-<LottieAnimation class="rounded-lg border h-[36vh]" :animationData="Hello" :loop="true" />
-
 买了台 MacBook Air，其实我早在 8 月底就拿到了，但因为博客在半年前 💀 后还未复活就文章也就随着一拖再拖。
 
 ![使用默认壁纸的 MacBook Air 桌面](/images/macbook-air-desktop.webp)
