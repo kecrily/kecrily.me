@@ -7,10 +7,13 @@ import {
 } from 'unocss'
 
 const cssExtend: Record<string, CSSObject> = {
+  'h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a': {
+    'text-decoration': 'none'
+  },
   'p': {
     'line-break': 'loose'
   },
-  'li>p': {
+  'li > p': {
     margin: 0
   },
   'hr': {
