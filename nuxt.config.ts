@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   modules: ['@nuxt/content', '@unocss/nuxt'],
-  app: { rootId: '_' },
+  app: { rootId: '_', buildAssetsDir: '_' },
   content: {
     highlight: { theme: 'nord' },
     markdown: {
