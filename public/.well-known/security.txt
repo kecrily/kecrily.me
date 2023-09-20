@@ -1,0 +1,15 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+Contact: mailto:kecrily@gmail.com
+Expires: 2030-01-15T07:00:00.000Z
+Encryption: https://keys.openpgp.org/vks/v1/by-fingerprint/6492E00686064BD8561BADBDA2547DFF0237D6EC
+Preferred-Languages: en, zh
+Canonical: https://kecrily.me/.well-known/security.txt
+-----BEGIN PGP SIGNATURE-----
+
+iHUEARYIAB0WIQSZfW2o7rpWvyiUNGtu2/JqcR6j+QUCZQsZ0wAKCRBu2/JqcR6j
++dpyAQC8WgHhAi+1te3lSNUpkbol/hl4/zyWJ7UXRID6OQDjfQD7BXnJes/CkaY/
+gAmWwKeHGwWczy8viffvIMERUW//Iwk=
+=H3lm
+-----END PGP SIGNATURE-----

@@ -1,5 +1,5 @@
 export default defineNuxtConfig({
-  modules: ['@nuxt/content', '@unocss/nuxt'],
+  modules: ['@nuxt/content', '@unocss/nuxt', 'nuxt-security'],
   app: { rootId: '_', buildAssetsDir: '_' },
   content: {
     highlight: { theme: 'nord' },
