@@ -11,10 +11,10 @@ useHead({
     { property: 'og:type', content: 'article' },
     { property: 'og:title', content: post.title },
     { property: 'og:description', content: post.description },
-    { property: 'og:image', content: site.canonical + (post.cover ? post.cover : '/favicon.ico') },
+    { property: 'og:image', content: site.canonical + (post.cover ? post.cover : '/avatar.jpg') },
     { name: 'twitter:title', content: post.title },
     { name: 'twitter:description', content: post.description },
-    { name: 'twitter:image', content: site.canonical + (post.cover ? post.cover : '/favicon.ico') }
+    { name: 'twitter:image', content: site.canonical + (post.cover ? post.cover : '/avatar.jpg') }
   ],
   link: [
     { rel: 'canonical', href: site.canonical + post._path }

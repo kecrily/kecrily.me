@@ -12,16 +12,16 @@ useHead({
     { property: 'og:type', content: 'website' },
     { property: 'og:title', content: site.name },
     { property: 'og:description', content: site.description },
-    { property: 'og:image', content: '/favicon.ico' },
+    { property: 'og:image', content: '/avatar.jpg' },
     { name: 'twitter:card', content: 'summary' },
     { name: 'twitter:creator', content: '@kecrily' },
     { name: 'twitter:title', content: site.name },
     { name: 'twitter:description', content: site.description },
-    { name: 'twitter:image', content: '/favicon.ico' }
+    { name: 'twitter:image', content: '/avatar.jpg' }
   ],
   link: [
     { rel: 'canonical', href: site.canonical },
-    { rel: 'icon', type: 'image/png', href: '/favicon.ico' },
+    { rel: 'icon', href: '/favicon.ico' },
     { rel: 'alternate', href: '/feed.xml', title: `${site.name}'s RSS 2.0`, type: 'application/atom+xml' },
     { rel: 'alternate', href: '/feed.atom', title: `${site.name}'s Atom RSS`, type: 'application/rss+xml' },
     { rel: 'alternate', href: '/feed.atom', title: `${site.name}'s JSON Feed`, type: 'application/feed+json' },
