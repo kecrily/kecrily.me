@@ -35,7 +35,7 @@ function processNode(node: any) {
 export const generateFeed = async(event: any) => {
   const feed = new Feed({
     title: site.name,
-    id: site.canonical,
+    id: `${site.canonical}/`,
     link: site.canonical,
     description: site.description,
     feedLinks: {
@@ -48,7 +48,7 @@ export const generateFeed = async(event: any) => {
       link: site.canonical
     },
     favicon: `${site.canonical}/favicon.ico`,
-    image: `${site.canonical}/favicon.ico`,
+    image: `${site.canonical}/avatar.jpg`,
     copyright: ''
   })
 
@@ -56,7 +56,7 @@ export const generateFeed = async(event: any) => {
 
   for (const post of posts) {
     feed.addItem({
-      id: post._path?.split('/post/')[1],
+      id: `${site.canonical}${post._path}`,
       title: post.title!,
       link: `${site.canonical}${post._path}`,
       description: post.description!,
