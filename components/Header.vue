@@ -6,6 +6,9 @@
     <NuxtLink v-else to="/" class="font-semibold text-lg">
       {{ site.name }}
     </NuxtLink>
-    <a class="ri:rss-fill" href="/feed.xml" target="_blank" title="Subscribe Feed" />
+
+    <NuxtLink href="/feed.xml" target="_blank" title="Subscribe Feed">
+      <UnoIcon class="ri:rss-fill" />
+    </NuxtLink>
   </header>
 </template>
