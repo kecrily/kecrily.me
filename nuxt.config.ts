@@ -9,6 +9,11 @@ export default defineNuxtConfig({
       }
     }
   },
+  security: {
+    headers: {
+      crossOriginEmbedderPolicy: false
+    }
+  },
   devtools: true,
   experimental: {
     asyncEntry: true,
