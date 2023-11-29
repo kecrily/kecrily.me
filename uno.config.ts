@@ -1,10 +1,10 @@
-import type { CSSObject } from 'unocss'
 import {
   defineConfig,
   presetAttributify, presetIcons, presetTagify,
   presetTypography, presetUno,
   transformerDirectives, transformerVariantGroup
 } from 'unocss'
+import type { CSSObject } from 'unocss'
 
 const cssExtend: Record<string, CSSObject> = {
   'h1 > a, h2 > a, h3 > a, h4 > a, h5 > a, h6 > a': {

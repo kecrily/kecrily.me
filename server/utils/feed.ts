@@ -1,5 +1,5 @@
-import { toHtml } from 'hast-util-to-html'
 import { Feed } from 'feed'
+import { toHtml } from 'hast-util-to-html'
 import { serverQueryContent } from '#content/server'
 import { site } from '~/composables'
 
