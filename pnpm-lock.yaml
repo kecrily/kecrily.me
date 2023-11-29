@@ -35,6 +35,9 @@ devDependencies:
   nuxt-security:
     specifier: 1.0.0-rc.4
     version: 1.0.0-rc.4
+  nuxt-umami:
+    specifier: ^2.5.5
+    version: 2.5.5(vue@3.3.9)
   rehype-img-size:
     specifier: ^1.0.1
     version: 1.0.1
@@ -7387,6 +7390,15 @@ packages:
     transitivePeerDependencies:
       - rollup
       - supports-color
+    dev: true
+
+  /nuxt-umami@2.5.5(vue@3.3.9):
+    resolution: {integrity: sha512-awB5MEa6Me7eAumUdr2sqtfAjaWAW6JmABKGzJpszw/+cmAfDleoRQxWw4X9Aql2jOxqxa6BQCPRbDKQo+QZSA==}
+    dependencies:
+      '@vueuse/core': 10.6.1(vue@3.3.9)
+    transitivePeerDependencies:
+      - '@vue/composition-api'
+      - vue
     dev: true
 
   /nuxt@3.8.2(eslint@8.54.0)(typescript@5.3.2)(vite@4.5.0):
