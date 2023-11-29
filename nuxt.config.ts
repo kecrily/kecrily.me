@@ -1,6 +1,14 @@
 export default defineNuxtConfig({
+  extends: ['nuxt-umami'],
   modules: ['@nuxt/content', '@unocss/nuxt', 'nuxt-security'],
   app: { rootId: '_', buildAssetsDir: '_' },
+  appConfig: {
+    umami: {
+      version: 2,
+      host: 'https://insight.kecrily.me',
+      id: '6466ed6d-39eb-4e70-b349-0cd063e1c7f9'
+    }
+  },
   content: {
     highlight: { theme: 'nord' },
     markdown: {
