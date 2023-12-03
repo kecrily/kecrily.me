@@ -1,6 +1,6 @@
 export default defineNuxtConfig({
   extends: ['nuxt-umami'],
-  modules: ['@nuxt/content', '@unocss/nuxt', 'nuxt-security'],
+  modules: ['@nuxt/content', '@unocss/nuxt'],
   app: { rootId: '_', buildAssetsDir: '_' },
   appConfig: {
     umami: {
@@ -17,7 +17,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  security: { nonce: true },
   devtools: true,
   experimental: {
     asyncEntry: true,

@@ -19,7 +19,6 @@
     "feed": "^4.2.2",
     "hast-util-to-html": "^9.0.0",
     "nuxt": "^3.8.2",
-    "nuxt-security": "1.0.0-rc.4",
     "nuxt-umami": "^2.5.5",
     "rehype-img-size": "^1.0.1",
     "sitemap": "^7.1.1"
