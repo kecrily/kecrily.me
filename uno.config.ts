@@ -52,8 +52,8 @@ const cssExtend: Record<string, CSSObject> = {
 
 export default defineConfig({
   shortcuts: {
-    'bg-base': 'dark:bg-[#0E141B]',
-    'text-base': 'dark:text-[#D6D3D1]'
+    'bg-base': 'dark:bg-[#0E1116]',
+    'text-base': 'dark:text-[#E6EDF3]'
   },
   presets: [
     presetUno({ dark: 'media' }),
