@@ -17,7 +17,6 @@ export default defineNuxtConfig({
       }
     }
   },
-  devtools: true,
   experimental: {
     asyncEntry: true,
     componentIslands: true,
