@@ -2,6 +2,7 @@ export default defineNuxtConfig({
   extends: ['nuxt-umami'],
   modules: ['@nuxt/content', '@unocss/nuxt'],
   app: { rootId: '_', buildAssetsDir: '_' },
+
   appConfig: {
     umami: {
       version: 2,
@@ -9,6 +10,7 @@ export default defineNuxtConfig({
       id: '6466ed6d-39eb-4e70-b349-0cd063e1c7f9'
     }
   },
+
   content: {
     highlight: { theme: 'nord' },
     markdown: {
@@ -17,11 +19,16 @@ export default defineNuxtConfig({
       }
     }
   },
+
   experimental: {
     asyncEntry: true,
     componentIslands: true,
     viewTransition: true,
     writeEarlyHints: true,
     headNext: true
+  },
+
+  devtools: {
+    enabled: true
   }
 })
