@@ -1,7 +1,7 @@
 export default defineNuxtConfig({
   extends: ['nuxt-umami'],
   modules: ['@nuxt/content', '@unocss/nuxt'],
-  app: { rootId: '_', buildAssetsDir: '_' },
+  app: { rootId: '_', buildAssetsDir: 'k' },
 
   nitro: {
     prerender: {
