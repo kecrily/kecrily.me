@@ -3,6 +3,17 @@ export default defineNuxtConfig({
   modules: ['@nuxt/content', '@unocss/nuxt'],
   app: { rootId: '_', buildAssetsDir: '_' },
 
+  nitro: {
+    prerender: {
+      routes: [
+        '/feed.atom',
+        '/feed.json',
+        '/feed.xml',
+        '/sitemap.xml'
+      ]
+    }
+  },
+
   appConfig: {
     umami: {
       version: 2,
