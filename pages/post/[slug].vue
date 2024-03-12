@@ -30,7 +30,7 @@ definePageMeta({
 
 <template>
   <article class="prose">
-    <ContentDoc>
+    <ContentDoc :head="false">
       <h1>{{ post.title }}</h1>
       <div class="flex mb-4">
         <time :datetime="post.date">{{ formatTime(post.date) }}</time>

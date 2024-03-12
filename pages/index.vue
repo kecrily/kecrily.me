@@ -1,8 +1,5 @@
 <script lang="ts" setup>
 const posts = await queryContent('post').sort({ date: -1 }).only(['title', 'date', '_path']).find()
-useHead({
-  title: ''
-})
 </script>
 
 <template>
