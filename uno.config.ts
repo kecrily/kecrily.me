@@ -44,6 +44,9 @@ const cssExtend: Record<string, CSSObject> = {
   'pre': {
     'background-color': '#2E3440 !important'
   },
+  'pre code': {
+    color: 'rgb(230 237 243)'
+  },
   'p code': {
     'white-space': 'normal',
     'word-wrap': 'break-word'
