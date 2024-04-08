@@ -1,5 +1,5 @@
 ---
-title: Git 下的文件名大小写变更
+title: Git 中的文件名大小写变更
 date: 2023-02-06 15:30:00+08
 description: |
   在不区分文件名大小写的文件系统中该如何才能让 Git 正常察觉到变更呢？网上掺杂着真假难辨的解决方案，修改 Git 配置还是使用自带的 git mv 命令？git-detect-case-change 就是兼具方便和正确的最优解。
