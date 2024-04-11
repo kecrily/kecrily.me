@@ -7,7 +7,7 @@
       {{ site.name }}
     </NuxtLink>
 
-    <NuxtLink href="/feed.xml" target="_blank" title="Subscribe Feed">
+    <NuxtLink href="/feed.xml" target="_blank" title="Subscribe Feed" class="print:hidden">
       <UnoIcon class="ri:rss-fill" />
     </NuxtLink>
   </header>
