@@ -32,10 +32,12 @@ definePageMeta({
   <article class="prose">
     <ContentDoc :head="false">
       <h1>{{ post.title }}</h1>
-      <div class="flex mb-4">
+      <div class="flex">
         <time :datetime="post.date">{{ formatTime(post.date) }}</time>
       </div>
       <ContentRenderer :value="post" tag="main" />
     </ContentDoc>
   </article>
+
+  <Toc :toc="post.body?.toc" />
 </template>
