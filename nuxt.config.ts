@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+  compatibilityDate: '2025-05-13',
+  future: {
+    compatibilityVersion: 4
+  },
+
   modules: ['@nuxt/content', '@unocss/nuxt'],
   app: { rootId: '_', buildAssetsDir: 'k' },
 
@@ -24,10 +29,8 @@ export default defineNuxtConfig({
 
   experimental: {
     asyncEntry: true,
-    componentIslands: true,
     viewTransition: true,
-    writeEarlyHints: true,
-    headNext: true
+    writeEarlyHints: true
   },
 
   devtools: {
