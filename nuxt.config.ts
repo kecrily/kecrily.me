@@ -1,5 +1,4 @@
 export default defineNuxtConfig({
-  extends: ['nuxt-umami'],
   modules: ['@nuxt/content', '@unocss/nuxt'],
   app: { rootId: '_', buildAssetsDir: 'k' },
 
@@ -11,14 +10,6 @@ export default defineNuxtConfig({
         '/feed.xml',
         '/sitemap.xml'
       ]
-    }
-  },
-
-  appConfig: {
-    umami: {
-      version: 2,
-      host: 'https://insight.kecrily.me',
-      id: '6466ed6d-39eb-4e70-b349-0cd063e1c7f9'
     }
   },
 
