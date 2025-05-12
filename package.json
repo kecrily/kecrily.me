@@ -21,9 +21,9 @@
     "@nuxt/content": "^2.12.1",
     "@unocss/nuxt": "^0.59.1",
     "eslint": "^8.57.0",
-    "feed": "^4.2.2",
+    "feed": "^5.0.1",
     "hast-util-to-html": "^9.0.1",
     "rehype-img-size": "^1.0.1",
-    "sitemap": "^7.1.1"
+    "sitemap": "^8.0.0"
   }
 }
