@@ -29,6 +29,8 @@ definePageMeta({
 </script>
 
 <template>
+  <Toc :toc="post.body?.toc" />
+
   <article class="prose">
     <ContentDoc :head="false">
       <h1>{{ post.title }}</h1>
@@ -38,6 +40,4 @@ definePageMeta({
       <ContentRenderer :value="post" tag="main" />
     </ContentDoc>
   </article>
-
-  <Toc :toc="post.body?.toc" />
 </template>
