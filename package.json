@@ -24,6 +24,7 @@
     "feed": "^5.0.1",
     "hast-util-to-html": "^9.0.1",
     "rehype-img-size": "^1.0.1",
-    "sitemap": "^8.0.0"
+    "sitemap": "^8.0.0",
+    "unocss": "^66.1.2"
   }
 }

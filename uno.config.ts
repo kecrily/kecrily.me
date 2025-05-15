@@ -1,7 +1,7 @@
 import {
   defineConfig,
   presetAttributify, presetIcons, presetTagify,
-  presetTypography, presetUno,
+  presetTypography, presetWind3,
   transformerDirectives, transformerVariantGroup
 } from 'unocss'
 import type { CSSObject } from 'unocss'
@@ -59,7 +59,7 @@ export default defineConfig({
     'text-base': 'dark:text-[#E6EDF3]'
   },
   presets: [
-    presetUno({ dark: 'media' }),
+    presetWind3({ dark: 'media' }),
     presetTypography({ cssExtend }),
     presetAttributify({ strict: true }),
     presetIcons({ prefix: '' }),
