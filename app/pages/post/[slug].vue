@@ -30,15 +30,15 @@ useHead({
 </script>
 
 <template>
-  <Toc :toc="post?.body?.toc" />
-
   <article class="prose">
     <ContentDoc :head="false">
       <h1>{{ post?.title }}</h1>
-      <div class="flex">
-        <time :datetime="post?.date">{{ formatTime(post?.date) }}</time>
-      </div>
-      <ContentRenderer :value="post" tag="main" />
+      <p class="text-neutral-700 dark:text-neutral-200">
+        发布于 <time :datetime="post?.date">{{ formatTime(post?.date) }}</time>
+      </p>
+
+      <Toc :value="post?.body?.toc" />
+      <ContentRenderer :value="post" />
     </ContentDoc>
   </article>
 </template>

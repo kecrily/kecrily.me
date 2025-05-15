@@ -37,14 +37,16 @@ useHead({
 
 <template>
   <Header />
-  <NuxtPage />
+  <main>
+    <NuxtPage />
+  </main>
 </template>
 
 <style>
 @import '@unocss/reset/tailwind.css';
 
 body {
-  @apply p-8 mx-auto bg-base text-base;
+  @apply p-5 lg:p-8 mx-auto bg-base text-base;
   max-width: 70ch;
 }
 </style>
