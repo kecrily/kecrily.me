@@ -11,7 +11,7 @@ const isShow = !(
 <template>
   <aside v-if="isShow" class="not-prose xl:(fixed top-0 bottom-0 left-0 pt-16 mt-28 pl-12 w-xs)">
     <nav id="toc">
-      <h2 class="text-sm text-neutral-700 font-medium mb-3">目录</h2>
+      <h2 class="text-sm text-neutral-700 dark:text-neutral-300 font-medium mb-3">目录</h2>
       <ul class="text-sm text-neutral-700 border-neutral-200 dark:(text-neutral-300 border-neutral-700) border-l space-y-2">
         <li
           v-for="link in value?.links"
