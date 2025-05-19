@@ -1,6 +1,6 @@
 import {
   defineConfig,
-  presetAttributify, presetIcons, presetTagify,
+  presetIcons,
   presetTypography, presetWind3,
   transformerDirectives, transformerVariantGroup
 } from 'unocss'
@@ -61,9 +61,7 @@ export default defineConfig({
   presets: [
     presetWind3({ dark: 'media' }),
     presetTypography({ cssExtend }),
-    presetAttributify({ strict: true }),
-    presetIcons({ prefix: '' }),
-    presetTagify()
+    presetIcons({ prefix: '' })
   ],
   transformers: [
     transformerDirectives(),

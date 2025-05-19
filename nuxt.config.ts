@@ -28,7 +28,6 @@ export default defineNuxtConfig({
   },
 
   experimental: {
-    asyncEntry: true,
     viewTransition: true,
     writeEarlyHints: true
   },
